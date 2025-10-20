@@ -1,0 +1,422 @@
+/* src/pages/Admin/EditCourse.css */
+.edit-course {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.edit-course .page-header {
+  margin-bottom: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.edit-course .page-header h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.edit-course .page-header p {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.edit-course .card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.edit-course .card:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.edit-course .card-body {
+  padding: 2rem;
+}
+
+.edit-course .form-label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.edit-course .form-control,
+.edit-course .form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+}
+
+.edit-course .form-control:focus,
+.edit-course .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+  background-color: #ffffff;
+}
+
+.edit-course .form-control::placeholder {
+  color: #adb5bd;
+  font-size: 0.9rem;
+}
+
+.edit-course textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.edit-course .form-control:invalid:not(:focus) {
+  border-color: #e9ecef;
+}
+
+.edit-course .form-control:invalid:focus {
+  border-color: #dc3545;
+}
+
+.edit-course .thumbnail-preview {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  border: 2px dashed #dee2e6;
+  padding: 4px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.edit-course .thumbnail-preview:hover {
+  border-color: #007bff;
+  transform: scale(1.02);
+}
+
+.edit-course .thumbnail-placeholder {
+  width: 100%;
+  height: 150px;
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.edit-course .btn {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.edit-course .btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border-color: #007bff;
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
+}
+
+.edit-course .btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+  border-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.edit-course .btn-primary:disabled {
+  background: #6c757d;
+  border-color: #6c757d;
+  transform: none;
+  box-shadow: none;
+}
+
+.edit-course .btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+  background: transparent;
+}
+
+.edit-course .btn-outline-secondary:hover {
+  color: #ffffff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  transform: translateY(-2px);
+}
+
+.edit-course .alert {
+  border-radius: 10px;
+  border: none;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-course .alert-danger {
+  background: linear-gradient(135deg, #f8d7da, #f1aeb5);
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.edit-course .btn-close {
+  padding: 0.5rem;
+  background-size: 0.8rem;
+}
+
+.edit-course .btn-close:focus {
+  box-shadow: none;
+}
+
+.edit-course .spinner-border {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 0.2em;
+}
+
+/* Form group enhancements */
+.edit-course .mb-3 {
+  margin-bottom: 1.5rem !important;
+}
+
+.edit-course .row {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.edit-course .row > [class*="col-"] {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Loading states */
+.edit-course .loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+/* Success message */
+.edit-course .alert-success {
+  background: linear-gradient(135deg, #d1edff, #b3d9ff);
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+/* Input group enhancements */
+.edit-course .input-group-text {
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-right: none;
+  color: #6c757d;
+}
+
+.edit-course .input-group .form-control {
+  border-left: none;
+}
+
+.edit-course .input-group .form-control:focus {
+  border-left: none;
+}
+
+/* Price input styling */
+.edit-course input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.edit-course input[type="number"]::-webkit-outer-spin-button,
+.edit-course input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .edit-course {
+    padding: 15px;
+  }
+  
+  .edit-course .card-body {
+    padding: 1.5rem;
+  }
+  
+  .edit-course .page-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .edit-course .page-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .edit-course .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .edit-course {
+    padding: 10px;
+  }
+  
+  .edit-course .card-body {
+    padding: 1.25rem;
+  }
+  
+  .edit-course .page-header h2 {
+    font-size: 1.35rem;
+  }
+  
+  .edit-course .form-control,
+  .edit-course .form-select {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for form elements */
+.edit-course .form-group {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation for form groups */
+.edit-course .row .mb-3:nth-child(1) { animation-delay: 0.1s; }
+.edit-course .row .mb-3:nth-child(2) { animation-delay: 0.2s; }
+.edit-course .row .mb-3:nth-child(3) { animation-delay: 0.3s; }
+.edit-course .mb-3:nth-child(4) { animation-delay: 0.4s; }
+.edit-course .mb-3:nth-child(5) { animation-delay: 0.5s; }
+
+/* Focus states for accessibility */
+.edit-course .form-control:focus-visible,
+.edit-course .form-select:focus-visible,
+.edit-course .btn:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar for textarea */
+.edit-course textarea.form-control::-webkit-scrollbar {
+  width: 6px;
+}
+
+.edit-course textarea.form-control::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.edit-course textarea.form-control::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.edit-course textarea.form-control::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Badge styling for category and level preview */
+.edit-course .badge-preview {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.edit-course .category-badge {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.edit-course .level-beginner {
+  background-color: #28a745;
+  color: white;
+}
+
+.edit-course .level-intermediate {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.edit-course .level-advanced {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Form validation styles */
+.edit-course .is-valid {
+  border-color: #28a745 !important;
+}
+
+.edit-course .is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.edit-course .valid-feedback,
+.edit-course .invalid-feedback {
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+/* Thumbnail upload area styling */
+.edit-course .thumbnail-upload-area {
+  border: 2px dashed #dee2e6;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-course .thumbnail-upload-area:hover {
+  border-color: #007bff;
+  background-color: #e3f2fd;
+}
+
+.edit-course .thumbnail-upload-area.dragover {
+  border-color: #007bff;
+  background-color: #bbdefb;
+}
+
+.edit-course .upload-icon {
+  font-size: 3rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.edit-course .upload-text {
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.edit-course .upload-hint {
+  color: #adb5bd;
+  font-size: 0.85rem;
+}

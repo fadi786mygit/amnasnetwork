@@ -1,0 +1,274 @@
+/* src/pages/Careers/Careers.css */
+.careers-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 0;
+}
+
+.careers-header {
+  color: white;
+}
+
+.careers-header h1 {
+  color: white;
+}
+
+.careers-header p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+.career-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.career-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.career-title {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.career-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.career-badges .badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+}
+
+/* Employment Type Badges */
+.badge-full-time {
+  background-color: #28a745 !important;
+  color: white !important;
+}
+
+.badge-part-time {
+  background-color: #17a2b8 !important;
+  color: white !important;
+}
+
+.badge-contract {
+  background-color: #6f42c1 !important;
+  color: white !important;
+}
+
+.badge-internship {
+  background-color: #fd7e14 !important;
+  color: white !important;
+}
+
+.badge-remote {
+  background-color: #e83e8c !important;
+  color: white !important;
+}
+
+/* Experience Level Badges */
+.badge-entry {
+  background-color: #20c997 !important;
+  color: white !important;
+}
+
+.badge-mid {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.badge-senior {
+  background-color: #fd7e14 !important;
+  color: white !important;
+}
+
+.badge-executive {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+.career-company {
+  font-size: 1.1rem;
+}
+
+.career-salary {
+  font-size: 1rem;
+}
+
+.career-location {
+  font-size: 0.9rem;
+}
+
+/* Active Filters */
+.active-filters {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.filter-label {
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.filter-tag {
+  background: #4A90E2;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-tag button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-tag button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.clear-filters-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.clear-filters-btn:hover {
+  background: #5a6268;
+}
+
+.empty-state {
+  padding: 3rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* Career Detail Styles */
+.career-detail-image {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.sticky-top {
+  position: sticky;
+  z-index: 1020;
+}
+
+.apply-section {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.job-meta .meta-item {
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.list-group-item {
+  border: none;
+  padding: 0.75rem 0.5rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .careers-container {
+    padding: 1rem 0;
+  }
+  
+  .careers-header h1 {
+    font-size: 2rem;
+  }
+  
+  .search-box,
+  .form-select,
+  .form-control {
+    margin-bottom: 1rem;
+  }
+
+  .active-filters {
+    padding: 0.75rem;
+  }
+
+  .filter-tag {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Loading Animation */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Form controls styling */
+.form-control, .form-select {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+/* Button styling */
+.btn-outline-primary {
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-1px);
+}

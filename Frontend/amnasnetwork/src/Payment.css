@@ -1,0 +1,126 @@
+/* Payment Page Styles */
+.payment-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px 0;
+}
+
+.payment-container .container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Pills */
+.nav-pills .nav-link {
+  color: #495057;
+  border: 1px solid #dee2e6;
+  background: white;
+  padding: 12px 20px;
+  font-weight: 500;
+}
+
+.nav-pills .nav-link.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: #f8f9fa;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-header {
+  border-radius: 10px 10px 0 0 !important;
+  font-weight: 600;
+}
+
+/* Bank Details */
+.bank-details .card {
+  border: 2px solid #e9ecef;
+}
+
+.bank-details .form-label {
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+/* QR Code Placeholder */
+.qr-code-placeholder {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+/* WhatsApp Section */
+.whatsapp-section {
+  border-left: 4px solid #25D366;
+  background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
+}
+
+/* Badge Styles */
+.badge-beginner {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+}
+
+.badge-intermediate {
+  background-color: #ffc107;
+  color: black;
+  padding: 6px 12px;
+}
+
+.badge-advanced {
+  background-color: #dc3545;
+  color: white;
+  padding: 6px 12px;
+}
+
+/* Button Styles */
+.btn-success {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border: none;
+  padding: 12px 30px;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  padding: 12px 30px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-container .container {
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  .nav-pills .nav-link {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .qr-code-placeholder {
+    padding: 20px;
+  }
+}

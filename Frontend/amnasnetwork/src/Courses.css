@@ -1,0 +1,270 @@
+/* src/pages/Courses/Courses.css */
+.courses-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 0;
+}
+
+.courses-header {
+  color: white;
+}
+
+.courses-header h1 {
+  color: white;
+}
+
+.courses-header p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+}
+
+.course-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.course-image-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.course-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-image {
+  transform: scale(1.05);
+}
+
+.course-title {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.course-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.course-badges .badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+}
+
+.badge-beginner {
+  background-color: #28a745 !important;
+  color: white !important;
+}
+
+.badge-intermediate {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.badge-advanced {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+.course-price {
+  font-size: 1.25rem;
+}
+
+.course-instructor {
+  font-size: 0.85rem;
+}
+
+.empty-state {
+  padding: 3rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .courses-container {
+    padding: 1rem 0;
+  }
+  
+  .courses-header h1 {
+    font-size: 2rem;
+  }
+  
+  .search-box,
+  .form-select {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Loading Animation */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Card hover effects */
+.card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  border-color: #4A90E2;
+}
+
+/* Form controls styling */
+.form-control, .form-select {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+/* Button styling */
+.btn-outline-primary {
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-1px);
+}
+
+
+
+
+
+
+/* Add to Courses.css */
+.course-detail-image {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.sticky-top {
+  position: sticky;
+  z-index: 1020;
+}
+
+.course-features .feature-item {
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn-lg {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+
+.lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+
+/* Payment Modal Styles */
+.modal-content {
+  border-radius: 10px;
+  border: none;
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-bottom: none;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.nav-pills .nav-link {
+  color: #495057;
+  border: 1px solid #dee2e6;
+}
+
+.nav-pills .nav-link.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+}
+
+.bank-details .card {
+  border: 2px solid #e9ecef;
+}
+
+.bank-details .card-header {
+  border-bottom: 2px solid #e9ecef;
+}
+
+.qr-code-placeholder {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.whatsapp-section {
+  border-left: 4px solid #25D366;
+}
+
+/* Copy button styles */
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Badge styles */
+.badge-beginner {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-intermediate {
+  background-color: #ffc107;
+  color: black;
+}
+
+.badge-advanced {
+  background-color: #dc3545;
+  color: white;
+}
