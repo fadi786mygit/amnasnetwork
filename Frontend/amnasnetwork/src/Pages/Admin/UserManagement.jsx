@@ -1,6 +1,7 @@
 // src/pages/Admin/UserManagement.jsx
 import React, { useState, useEffect } from 'react';
 import "../../UserManagement.css";
+import baseUrl from '../../baseUrl';
 
 const UserManagement = () => {
   const [users, setUsers] = useState([]);
@@ -14,7 +15,7 @@ const UserManagement = () => {
   const fetchUsers = async () => {
     try {
       const token = sessionStorage.getItem('adminToken');
-      const response = await fetch('http://localhost:8082/api/users/getUsers', {
+      const response = await fetch(`${baseUrl}/api/users/getUsers`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -50,7 +51,7 @@ const UserManagement = () => {
     if (window.confirm('Are you sure you want to delete this user?')) {
       try {
         const token = sessionStorage.getItem('adminToken');
-        const response = await fetch(`http://localhost:8082/api/users/${userId}`, {
+        const response = await fetch(`${baseUrl}/api/users/${userId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`

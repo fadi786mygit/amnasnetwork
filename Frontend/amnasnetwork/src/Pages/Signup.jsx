@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import logo from '../Components/Images/logo.jpg';
 import '../style.css';
+import baseUrl from '../baseUrl';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +50,7 @@ const SignUp = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:8082/api/users/register', { // Fixed endpoint
+      const res = await axios.post(`${baseUrl}/api/users/register`, { // Fixed endpoint
         fullName: formData.fullName,
         phone: formData.phone,
         email: formData.email,

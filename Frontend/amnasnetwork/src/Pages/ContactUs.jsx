@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import logo from '../Components/Images/logo.jpg';
 import '../style.css';
+import baseUrl from '../baseUrl';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +63,7 @@ const ContactUs = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8082/api/quote/quotes', {
+      const response = await axios.post(`${baseUrl}/api/quote/quotes`, {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -220,7 +221,7 @@ const ContactUs = () => {
                 <div className="contact-links">
                   <a href="/courses" className="signup-signin-link">Browse Courses</a>
                   <a href="/about" className="signup-signin-link">About Us</a>
-                  <a href="/faq" className="signup-signin-link">FAQ</a>
+                  {/* <a href="/faq" className="signup-signin-link">FAQ</a> */}
                 </div>
               </div>
 

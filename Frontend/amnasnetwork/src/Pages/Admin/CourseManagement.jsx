@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '.././../CourseManagement.css';
+import baseUrl from '../../baseUrl';
 
 const CourseManagement = () => {
     const [courses, setCourses] = useState([]);
@@ -28,7 +29,7 @@ const CourseManagement = () => {
         setLoading(true);
         try {
             const token = sessionStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:8082/api/courses/getCourses', {
+            const response = await fetch(`${baseUrl}/api/courses/getCourses`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -54,7 +55,7 @@ const CourseManagement = () => {
 
         try {
             const token = sessionStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:8082/api/courses/createCourse', {
+            const response = await fetch(`${baseUrl}/api/courses/createCourse`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -94,7 +95,7 @@ const CourseManagement = () => {
 
         try {
             const token = sessionStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:8082/api/courses/deleteCourse/${courseId}`, {
+            const response = await fetch(`${baseUrl}/api/courses/deleteCourse/${courseId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

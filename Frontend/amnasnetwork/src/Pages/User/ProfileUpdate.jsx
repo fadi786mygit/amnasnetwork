@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '.././../ProfileUpdate.css';
+import baseUrl from '../../baseUrl';
 
 const ProfileUpdate = () => {
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ const ProfileUpdate = () => {
         }));
       }
 
-      const response = await fetch('http://localhost:8082/api/users/profile', {
+      const response = await fetch(`${baseUrl}/api/users/profile`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -150,7 +151,7 @@ const ProfileUpdate = () => {
         updateData.newPassword = formData.newPassword;
       }
 
-      const response = await fetch('http://localhost:8082/api/users/profile', {
+      const response = await fetch(`${baseUrl}/api/users/profile`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

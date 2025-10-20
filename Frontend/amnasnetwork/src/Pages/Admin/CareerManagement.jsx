@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '.././../CareerManagement.css';
+import baseUrl from '../../baseUrl';
 
 const CareerManagement = () => {
     const [careers, setCareers] = useState([]);
@@ -36,7 +37,7 @@ const CareerManagement = () => {
         setLoading(true);
         try {
             const token = sessionStorage.getItem('adminToken');
-            const response = await fetch('http://localhost:8082/api/careers/getCareers?isActive=true', {
+            const response = await fetch(`${baseUrl}/api/careers/getCareers?isActive=true`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -72,7 +73,7 @@ const CareerManagement = () => {
                 tags: formData.tags.filter(tag => tag.trim() !== '')
             };
 
-            const response = await fetch('http://localhost:8082/api/careers/createCareer', {
+            const response = await fetch(`${baseUrl}/api/careers/createCareer`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -120,7 +121,7 @@ const CareerManagement = () => {
 
         try {
             const token = sessionStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:8082/api/careers/deleteCareer/${careerId}`, {
+            const response = await fetch(`${baseUrl}/api/careers/deleteCareer/${careerId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '.././../AdminLogin.css';
+import baseUrl from '../../baseUrl';
 
 const AdminLogin = () => {
     const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ const AdminLogin = () => {
 
         try {
             // API call to verify admin credentials
-            const response = await fetch('http://localhost:8082/api/admin/login', {
+            const response = await fetch(`${baseUrl}/api/admin/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import '.././../EditCourse.css';
+import baseUrl from '../../baseUrl';
 
 const EditCourse = () => {
     const [course, setCourse] = useState(null);
@@ -42,7 +43,7 @@ const EditCourse = () => {
                 throw new Error('Invalid course ID');
             }
 
-            const response = await fetch(`http://localhost:8082/api/courses/getCourse/${courseId}`, {
+            const response = await fetch(`${baseUrl}/api/courses/getCourse/${courseId}`, {
                 method: 'GET', // Move method outside of headers
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -80,7 +81,7 @@ const EditCourse = () => {
 
         try {
             const token = sessionStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:8082/api/courses/updateCourse/${courseId}`, {
+            const response = await fetch(`${baseUrl}/api/courses/updateCourse/${courseId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

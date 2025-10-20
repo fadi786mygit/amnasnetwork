@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../Courses.css';
+import baseUrl from '../baseUrl';
 
 const Courses = () => {
   const [courses, setCourses] = useState([]);
@@ -19,7 +20,7 @@ const Courses = () => {
   const fetchCourses = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8082/api/courses/getCourses');
+      const response = await fetch(`${baseUrl}/api/courses/getCourses`);
       
       if (response.ok) {
         const data = await response.json();

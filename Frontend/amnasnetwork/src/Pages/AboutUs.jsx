@@ -2,6 +2,7 @@
 import React from 'react';
 import '../Aboutus.css';
 import logo from '../Components/Images/logo.jpg';
+import baseUrl from '../baseUrl';
 
 const AboutUs = () => {
     return (

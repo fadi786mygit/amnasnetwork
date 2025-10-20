@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../Career.css';
+import baseUrl from '../baseUrl';
 
 const CareerDetail = () => {
   const [career, setCareer] = useState(null);
@@ -32,7 +33,7 @@ const CareerDetail = () => {
   const fetchCareer = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:8082/api/careers/getCareer/${id}`);
+      const response = await fetch(`${baseUrl}/api/careers/getCareer/${id}`);
       
       if (response.ok) {
         const data = await response.json();
@@ -103,7 +104,7 @@ const CareerDetail = () => {
 
       console.log('Sending application:', applicationPayload);
 
-      const response = await fetch('http://localhost:8082/api/applications/apply', {
+      const response = await fetch(`${baseUrl}/api/applications/apply`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

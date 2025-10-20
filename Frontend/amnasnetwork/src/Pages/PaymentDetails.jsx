@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import '../Payment.css';
 import qrcode from '../Components/Images/qrcode.jpg';
+import baseUrl from '../baseUrl';
 
 const PaymentDetails = () => {
     const [course, setCourse] = useState(null);
@@ -38,7 +39,7 @@ const PaymentDetails = () => {
     const fetchCourse = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`http://localhost:8082/api/courses/getCourse/${id}`);
+            const response = await fetch(`${baseUrl}/api/courses/getCourse/${id}`);
 
             if (response.ok) {
                 const data = await response.json();

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '.././../EditCareer.css';
+import baseUrl from '../../baseUrl';
 
 const EditCareers = () => {
     const [career, setCareer] = useState(null);
@@ -38,7 +39,7 @@ const EditCareers = () => {
         setFetchLoading(true);
         try {
             const token = sessionStorage.getItem('adminToken');
-            const response = await fetch(`http://localhost:8082/api/careers/getCareer/${id}`, {
+            const response = await fetch(`${baseUrl}/api/careers/getCareer/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -102,7 +103,7 @@ const EditCareers = () => {
                 tags: formData.tags.filter(tag => tag.trim() !== '')
             };
 
-            const response = await fetch(`http://localhost:8082/api/careers/updateCareer/${id}`, {
+            const response = await fetch(`${baseUrl}/api/careers/updateCareer/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

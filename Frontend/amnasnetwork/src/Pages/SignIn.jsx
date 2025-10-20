@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import logo from '../Components/Images/logo.jpg';
 import '../style.css';
+import baseUrl from '../baseUrl';
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ const SignIn = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:8082/api/users/login', {
+      const res = await axios.post(`${baseUrl}/api/users/login`, {
         email: formData.email,
         password: formData.password
       });
@@ -149,11 +150,11 @@ const SignIn = () => {
                       >
                         {loading ? 'Signing In...' : 'Sign In'}
                       </button>
-                      <a href="/forgot-password" className="forgot-password-link">
+                      {/* <a href="/forgot-password" className="forgot-password-link">
                         <button type="button" className="btn btn-link">
                           Forgot your password?
                         </button>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </form>

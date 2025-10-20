@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../Home.css';
+import baseUrl from '../baseUrl';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,7 +26,7 @@ const Home = () => {
     const fetchCourses = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:8082/api/courses/getCourses');
+        const response = await axios.get(`${baseUrl}/api/courses/getCourses`);
 
         if (response.data && response.data.data) {
           // Take only the first 5 courses for carousel, or all if less than 5

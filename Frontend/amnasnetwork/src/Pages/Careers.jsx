@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../Career.css';
+import baseUrl from '../baseUrl';
 
 const Careers = () => {
   const [careers, setCareers] = useState([]);
@@ -31,8 +32,8 @@ const Careers = () => {
 
       const queryString = params.toString();
       const url = queryString 
-        ? `http://localhost:8082/api/careers/getCareers?${queryString}`
-        : 'http://localhost:8082/api/careers/getCareers';
+        ? `${baseUrl}/api/careers/getCareers?${queryString}`
+        : `${baseUrl}/api/careers/getCareers`;
 
       const response = await fetch(url);
       

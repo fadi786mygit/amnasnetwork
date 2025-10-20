@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import '.././../UserDashboard.css';
+import baseUrl from '../../baseUrl';
 
 const UserDashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
